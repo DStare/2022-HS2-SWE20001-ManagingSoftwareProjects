@@ -11,3 +11,17 @@ C:\Users\riley\source\repos\go2grocery_1\go2grocery_1\obj\Debug\go2grocery_1.csp
 C:\Users\riley\source\repos\go2grocery_1\go2grocery_1\obj\Debug\go2grocery_1.csproj.CoreCompileInputs.cache
 C:\Users\riley\source\repos\go2grocery_1\go2grocery_1\obj\Debug\go2grocery_1.exe
 C:\Users\riley\source\repos\go2grocery_1\go2grocery_1\obj\Debug\go2grocery_1.pdb
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\Database1.mdf
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\Database1_log.ldf
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\go2grocery_1.exe.config
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\go2grocery_1.exe
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\go2grocery_1.pdb
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.csproj.AssemblyReference.cache
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.Form1.resources
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.Properties.Resources.resources
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.csproj.GenerateResource.cache
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.exe
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.pdb
+C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.editForm.resources

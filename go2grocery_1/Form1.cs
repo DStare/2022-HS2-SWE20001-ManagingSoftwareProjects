@@ -36,5 +36,18 @@ namespace go2grocery_1
             this.memberTableAdapter.Fill(this.dataSet1.Member);
 
         }
+
+        private void memberDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void editButton1_Click(object sender, EventArgs e)
+        {
+            editForm editForm = new editForm();
+            editForm.Show();
+        }
+
+       
     }
 }

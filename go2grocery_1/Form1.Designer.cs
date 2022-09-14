@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.memberBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new go2grocery_1.DataSet1();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -45,18 +43,22 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.memberBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.memberTableAdapter = new go2grocery_1.DataSet1TableAdapters.MemberTableAdapter();
-            this.tableAdapterManager = new go2grocery_1.DataSet1TableAdapters.TableAdapterManager();
+            this.Edit = new System.Windows.Forms.ToolStripButton();
             this.memberDataGridView = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new go2grocery_1.DataSet1();
+            this.memberTableAdapter = new go2grocery_1.DataSet1TableAdapters.MemberTableAdapter();
+            this.tableAdapterManager = new go2grocery_1.DataSet1TableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).BeginInit();
             this.memberBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // memberBindingNavigator
@@ -78,7 +80,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.memberBindingNavigatorSaveItem});
+            this.memberBindingNavigatorSaveItem,
+            this.Edit});
             this.memberBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.memberBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.memberBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -86,7 +89,7 @@
             this.memberBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.memberBindingNavigator.Name = "memberBindingNavigator";
             this.memberBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.memberBindingNavigator.Size = new System.Drawing.Size(593, 31);
+            this.memberBindingNavigator.Size = new System.Drawing.Size(708, 31);
             this.memberBindingNavigator.TabIndex = 1;
             this.memberBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -98,16 +101,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataMember = "Member";
-            this.memberBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -195,15 +188,15 @@
             this.memberBindingNavigatorSaveItem.Text = "Save Data";
             this.memberBindingNavigatorSaveItem.Click += new System.EventHandler(this.memberBindingNavigatorSaveItem_Click);
             // 
-            // memberTableAdapter
+            // Edit
             // 
-            this.memberTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.MemberTableAdapter = this.memberTableAdapter;
-            this.tableAdapterManager.UpdateOrder = go2grocery_1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.Edit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
+            this.Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(31, 28);
+            this.Edit.Text = "Edit";
+            this.Edit.Click += new System.EventHandler(this.editButton1_Click);
             // 
             // memberDataGridView
             // 
@@ -215,13 +208,14 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.memberDataGridView.DataSource = this.memberBindingSource;
-            this.memberDataGridView.Location = new System.Drawing.Point(0, 23);
-            this.memberDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.memberDataGridView.Location = new System.Drawing.Point(0, 43);
+            this.memberDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.memberDataGridView.Name = "memberDataGridView";
             this.memberDataGridView.RowHeadersWidth = 62;
             this.memberDataGridView.RowTemplate.Height = 28;
-            this.memberDataGridView.Size = new System.Drawing.Size(593, 143);
+            this.memberDataGridView.Size = new System.Drawing.Size(697, 119);
             this.memberDataGridView.TabIndex = 1;
+            this.memberDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.memberDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -256,23 +250,43 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 150;
             // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataMember = "Member";
+            this.memberBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // memberTableAdapter
+            // 
+            this.memberTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MemberTableAdapter = this.memberTableAdapter;
+            this.tableAdapterManager.UpdateOrder = go2grocery_1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 292);
+            this.ClientSize = new System.Drawing.Size(708, 311);
             this.Controls.Add(this.memberDataGridView);
             this.Controls.Add(this.memberBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).EndInit();
             this.memberBindingNavigator.ResumeLayout(false);
             this.memberBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,6 +315,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.ToolStripButton Edit;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

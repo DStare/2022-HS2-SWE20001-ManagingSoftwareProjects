@@ -58,16 +58,19 @@ namespace go2grocery_1
         {
            // try
            // {
+           
                 this.Validate();
+                this.dataSet11.AcceptChanges();
                 this.memberBindingSource.EndEdit();
                 this.memberTableAdapter.Update(this.dataSet11.Member);
                 MessageBox.Show("Update successful");
+
            /* }
             catch (System.Exception ex)
             {
                 MessageBox.Show("Update failed");
             }
-           */
+            */
             this.Hide();
             Form1 newForm1 = new Form1();
             newForm1.Show();

@@ -60,8 +60,7 @@ namespace go2grocery_1
                 */
                 this.memberTableAdapter.Update(this.dataSet1.Member);
                 this.dataSet1.Member.AcceptChanges();
-                this.memberTableAdapter.fill()
-    Me.yourTableAdapter.Fill(Me.yourDataSet.yourTable)
+                this.memberTableAdapter.Fill(this.dataSet1.Member);
                 MessageBox.Show("Update successful");
 
                 
@@ -70,6 +69,12 @@ namespace go2grocery_1
             {
                 MessageBox.Show("Update failed");
             }
+        }
+
+        private void B1_Click(object sender, EventArgs e)
+        {
+            string filePath = "//Downloads";
+            dataSet1.WriteXml(filePath);
         }
 
     }

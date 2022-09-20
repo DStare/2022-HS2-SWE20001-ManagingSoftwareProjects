@@ -45,7 +45,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.memberBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.Edit = new System.Windows.Forms.ToolStripButton();
             this.memberDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,8 +80,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.memberBindingNavigatorSaveItem,
-            this.Edit});
+            this.memberBindingNavigatorSaveItem});
             this.memberBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.memberBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.memberBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -198,16 +196,6 @@
             this.memberBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
             this.memberBindingNavigatorSaveItem.Text = "Save Data";
             this.memberBindingNavigatorSaveItem.Click += new System.EventHandler(this.memberBindingNavigatorSaveItem_Click);
-            // 
-            // Edit
-            // 
-            this.Edit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
-            this.Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(31, 28);
-            this.Edit.Text = "Edit";
-            this.Edit.Click += new System.EventHandler(this.B1_Click);
             // 
             // memberDataGridView
             // 
@@ -328,7 +316,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.ToolStripButton Edit;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button export_btn;
     }

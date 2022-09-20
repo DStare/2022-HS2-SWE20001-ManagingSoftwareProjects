@@ -25,3 +25,17 @@ C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\pr
 C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.editForm.resources
 C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\Database1.mdf
 C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\Database1_log.ldf
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\Database1.mdf
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\Database1_log.ldf
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\go2grocery_1.exe.config
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\go2grocery_1.exe
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\go2grocery_1.pdb
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.csproj.AssemblyReference.cache
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.editForm.resources
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.Form1.resources
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.Properties.Resources.resources
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.csproj.GenerateResource.cache
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.csproj.CoreCompileInputs.cache
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.exe
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.pdb

@@ -73,9 +73,19 @@ namespace go2grocery_1
 
         private void B1_Click(object sender, EventArgs e)
         {
-            string filePath = "//Downloads";
-            dataSet1.WriteXml(filePath);
+            dataSet1.WriteXml("Member.xml");
+            MessageBox.Show("Export successful");
         }
 
+        private void B1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void export_btn_Click(object sender, EventArgs e)
+        {
+            dataSet1.WriteXml("Member.xml");
+            MessageBox.Show("Export successful");
+        }
     }
 }

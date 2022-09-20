@@ -54,6 +54,26 @@ namespace go2grocery_1
             
         }
 
+        private void editForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // try
+           // {
+                this.Validate();
+                this.memberBindingSource.EndEdit();
+                this.memberTableAdapter.Update(this.dataSet11.Member);
+                MessageBox.Show("Update successful");
+           /* }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Update failed");
+            }
+           */
+            this.Hide();
+            Form1 newForm1 = new Form1();
+            newForm1.Show();
+        }
+
+
         private void memberBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

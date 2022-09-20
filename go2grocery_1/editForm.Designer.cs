@@ -328,6 +328,7 @@
             this.Name = "editForm";
             this.Text = "editForm";
             this.Load += new System.EventHandler(this.editForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.editForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).EndInit();

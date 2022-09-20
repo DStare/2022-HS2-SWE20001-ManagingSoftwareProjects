@@ -44,10 +44,33 @@ namespace go2grocery_1
 
         private void editButton1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             editForm editForm = new editForm();
             editForm.Show();
+            //this.Form1_FormClosing(this);
         }
 
-       
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                /*this.Validate();
+                this.memberBindingSource.EndEdit();
+                this.memberTableAdapter.Update(this.dataSet1.Member);
+                */
+                this.memberTableAdapter.Update(this.dataSet1.Member);
+                this.dataSet1.Member.AcceptChanges();
+                this.memberTableAdapter.fill()
+    Me.yourTableAdapter.Fill(Me.yourDataSet.yourTable)
+                MessageBox.Show("Update successful");
+
+                
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Update failed");
+            }
+        }
+
     }
 }

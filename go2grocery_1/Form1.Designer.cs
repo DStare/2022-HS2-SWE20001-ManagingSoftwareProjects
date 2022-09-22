@@ -45,7 +45,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.memberBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.Edit = new System.Windows.Forms.ToolStripButton();
             this.memberDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +53,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.memberTableAdapter = new go2grocery_1.DataSet1TableAdapters.MemberTableAdapter();
             this.tableAdapterManager = new go2grocery_1.DataSet1TableAdapters.TableAdapterManager();
-            this.B1 = new System.Windows.Forms.Button();
+            this.export_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).BeginInit();
             this.memberBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
@@ -81,8 +80,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.memberBindingNavigatorSaveItem,
-            this.Edit});
+            this.memberBindingNavigatorSaveItem});
             this.memberBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.memberBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.memberBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -199,16 +197,6 @@
             this.memberBindingNavigatorSaveItem.Text = "Save Data";
             this.memberBindingNavigatorSaveItem.Click += new System.EventHandler(this.memberBindingNavigatorSaveItem_Click);
             // 
-            // Edit
-            // 
-            this.Edit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
-            this.Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(31, 28);
-            this.Edit.Text = "Edit";
-            this.Edit.Click += new System.EventHandler(this.editButton1_Click);
-            // 
             // memberDataGridView
             // 
             this.memberDataGridView.AutoGenerateColumns = false;
@@ -271,22 +259,22 @@
             this.tableAdapterManager.MemberTableAdapter = this.memberTableAdapter;
             this.tableAdapterManager.UpdateOrder = go2grocery_1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // B1
+            // export_btn
             // 
-            this.B1.Location = new System.Drawing.Point(327, 222);
-            this.B1.Name = "B1";
-            this.B1.Size = new System.Drawing.Size(75, 23);
-            this.B1.TabIndex = 2;
-            this.B1.Text = "B1";
-            this.B1.UseVisualStyleBackColor = true;
-            this.Edit.Click += new System.EventHandler(this.B1_Click);
+            this.export_btn.Location = new System.Drawing.Point(305, 245);
+            this.export_btn.Name = "export_btn";
+            this.export_btn.Size = new System.Drawing.Size(75, 23);
+            this.export_btn.TabIndex = 2;
+            this.export_btn.Text = "Export";
+            this.export_btn.UseVisualStyleBackColor = true;
+            this.export_btn.Click += new System.EventHandler(this.export_btn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 311);
-            this.Controls.Add(this.B1);
+            this.Controls.Add(this.export_btn);
             this.Controls.Add(this.memberDataGridView);
             this.Controls.Add(this.memberBindingNavigator);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -328,9 +316,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.ToolStripButton Edit;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button B1;
+        private System.Windows.Forms.Button export_btn;
     }
 }
 

@@ -17,11 +17,6 @@ namespace go2grocery_1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void memberBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -40,14 +35,6 @@ namespace go2grocery_1
         private void memberDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void editButton1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            editForm editForm = new editForm();
-            editForm.Show();
-            //this.Form1_FormClosing(this);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -71,11 +58,10 @@ namespace go2grocery_1
             }
         }
 
-        private void B1_Click(object sender, EventArgs e)
+        private void export_btn_Click(object sender, EventArgs e)
         {
-            string filePath = "C:\\Users\\David\\Desktop\\uni work\\sem2 2022";
-            dataSet1.WriteXml(filePath);
+            dataSet1.WriteXml("Member.xml");
+            MessageBox.Show("Export successful");
         }
-
     }
 }

@@ -48,15 +48,38 @@ namespace go2grocery_1
                 this.memberTableAdapter.Update(this.dataSet1.Member);
                 this.dataSet1.Member.AcceptChanges();
                 this.memberTableAdapter.Fill(this.dataSet1.Member);
-                MessageBox.Show("Update successful");
 
-                
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show("Update failed");
             }
         }
+
+        private void SalesFormButton_Click(object sender, EventArgs e)
+        {
+            SalesForm salesForm1 = new SalesForm();
+            salesForm1.Show();
+            this.Hide();
+
+            try
+            {
+                /*this.Validate();
+                this.memberBindingSource.EndEdit();
+                this.memberTableAdapter.Update(this.dataSet1.Member);
+                */
+                this.memberTableAdapter.Update(this.dataSet1.Member);
+                this.dataSet1.Member.AcceptChanges();
+                this.memberTableAdapter.Fill(this.dataSet1.Member);
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Update failed");
+            }
+
+        }
+
 
         private void export_btn_Click(object sender, EventArgs e)
         {

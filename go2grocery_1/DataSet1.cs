@@ -13,9 +13,12 @@ namespace go2grocery_1 {
     }
 }
 
-namespace go2grocery_1.DataSet1TableAdapters {
-    
-    
+namespace go2grocery_1.DataSet1TableAdapters
+{
+    partial class SalesTableAdapter
+    {
+    }
+
     public partial class MemberTableAdapter {
     }
 }

@@ -54,6 +54,8 @@
             this.memberTableAdapter = new go2grocery_1.DataSet1TableAdapters.MemberTableAdapter();
             this.tableAdapterManager = new go2grocery_1.DataSet1TableAdapters.TableAdapterManager();
             this.export_btn = new System.Windows.Forms.Button();
+            this.SalesFormButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).BeginInit();
             this.memberBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
@@ -80,7 +82,9 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.memberBindingNavigatorSaveItem});
+            this.memberBindingNavigatorSaveItem,
+            this.toolStripSeparator1,
+            this.SalesFormButton});
             this.memberBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.memberBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.memberBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -257,6 +261,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.MemberTableAdapter = this.memberTableAdapter;
+           // this.tableAdapterManager.SalesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = go2grocery_1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // export_btn
@@ -268,6 +273,21 @@
             this.export_btn.Text = "Export";
             this.export_btn.UseVisualStyleBackColor = true;
             this.export_btn.Click += new System.EventHandler(this.export_btn_Click);
+            // 
+            // SalesFormButton
+            // 
+            this.SalesFormButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.SalesFormButton.Image = ((System.Drawing.Image)(resources.GetObject("SalesFormButton.Image")));
+            this.SalesFormButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SalesFormButton.Name = "SalesFormButton";
+            this.SalesFormButton.Size = new System.Drawing.Size(68, 28);
+            this.SalesFormButton.Text = "Sales Form";
+            this.SalesFormButton.Click += new System.EventHandler(this.SalesFormButton_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // Form1
             // 
@@ -318,6 +338,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button export_btn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton SalesFormButton;
     }
 }
 

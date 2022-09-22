@@ -73,7 +73,7 @@ namespace go2grocery_1
 
         private void B1_Click(object sender, EventArgs e)
         {
-            string filePath = "//Downloads";
+            string filePath = "C:\\Users\\David\\Desktop\\uni work\\sem2 2022";
             dataSet1.WriteXml(filePath);
         }
 

@@ -84,5 +84,13 @@ namespace go2grocery_1
                 MessageBox.Show("Update failed");
             }
         }
+
+        private void Export_Sales_btn_Click(object sender, EventArgs e)
+        {
+            {
+                dataSet1.WriteXml("Sales.xml");
+                MessageBox.Show("Export successful");
+            }
+        }
     }
 }

@@ -38,6 +38,9 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.salesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.SearchBar = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ReturnToMembers = new System.Windows.Forms.ToolStripButton();
             this.salesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +50,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReturnToMembers = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.SearchBar = new System.Windows.Forms.ToolStripTextBox();
+            this.Export_Sales_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingNavigator)).BeginInit();
@@ -76,6 +77,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.MemberTableAdapter = null;
+            this.tableAdapterManager.SalesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = go2grocery_1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // salesBindingNavigator
@@ -98,7 +100,7 @@
             this.salesBindingNavigator.MovePreviousItem = null;
             this.salesBindingNavigator.Name = "salesBindingNavigator";
             this.salesBindingNavigator.PositionItem = null;
-            this.salesBindingNavigator.Size = new System.Drawing.Size(844, 25);
+            this.salesBindingNavigator.Size = new System.Drawing.Size(1083, 25);
             this.salesBindingNavigator.TabIndex = 0;
             this.salesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -129,6 +131,29 @@
             this.salesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.salesBindingNavigatorSaveItem.Text = "Save Data";
             // 
+            // SearchBar
+            // 
+            this.SearchBar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.Size = new System.Drawing.Size(100, 25);
+            this.SearchBar.Text = "Search";
+            this.SearchBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnterKeyPress);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // ReturnToMembers
+            // 
+            this.ReturnToMembers.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ReturnToMembers.Image = ((System.Drawing.Image)(resources.GetObject("ReturnToMembers.Image")));
+            this.ReturnToMembers.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ReturnToMembers.Name = "ReturnToMembers";
+            this.ReturnToMembers.Size = new System.Drawing.Size(144, 22);
+            this.ReturnToMembers.Text = "Return to Members Form";
+            this.ReturnToMembers.Click += new System.EventHandler(this.ReturnToMembers_Click);
+            // 
             // salesDataGridView
             // 
             this.salesDataGridView.AutoGenerateColumns = false;
@@ -145,7 +170,7 @@
             this.salesDataGridView.DataSource = this.salesBindingSource;
             this.salesDataGridView.Location = new System.Drawing.Point(12, 28);
             this.salesDataGridView.Name = "salesDataGridView";
-            this.salesDataGridView.Size = new System.Drawing.Size(820, 329);
+            this.salesDataGridView.Size = new System.Drawing.Size(1059, 329);
             this.salesDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -196,34 +221,22 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Member_Id";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // ReturnToMembers
+            // Export_Sales_btn
             // 
-            this.ReturnToMembers.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.ReturnToMembers.Image = ((System.Drawing.Image)(resources.GetObject("ReturnToMembers.Image")));
-            this.ReturnToMembers.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ReturnToMembers.Name = "ReturnToMembers";
-            this.ReturnToMembers.Size = new System.Drawing.Size(144, 22);
-            this.ReturnToMembers.Text = "Return to Members Form";
-            this.ReturnToMembers.Click += new System.EventHandler(this.ReturnToMembers_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // SearchBar
-            // 
-            this.SearchBar.Name = "SearchBar";
-            this.SearchBar.Size = new System.Drawing.Size(100, 25);
-            this.SearchBar.Text = "Search";
-            this.SearchBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckEnterKeyPress);
-
+            this.Export_Sales_btn.Location = new System.Drawing.Point(465, 387);
+            this.Export_Sales_btn.Name = "Export_Sales_btn";
+            this.Export_Sales_btn.Size = new System.Drawing.Size(114, 30);
+            this.Export_Sales_btn.TabIndex = 2;
+            this.Export_Sales_btn.Text = "Export";
+            this.Export_Sales_btn.UseVisualStyleBackColor = true;
+            this.Export_Sales_btn.Click += new System.EventHandler(this.Export_Sales_btn_Click);
             // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 450);
+            this.ClientSize = new System.Drawing.Size(1083, 450);
+            this.Controls.Add(this.Export_Sales_btn);
             this.Controls.Add(this.salesDataGridView);
             this.Controls.Add(this.salesBindingNavigator);
             this.Name = "SalesForm";
@@ -263,5 +276,6 @@
         private System.Windows.Forms.ToolStripTextBox SearchBar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton ReturnToMembers;
+        private System.Windows.Forms.Button Export_Sales_btn;
     }
 }

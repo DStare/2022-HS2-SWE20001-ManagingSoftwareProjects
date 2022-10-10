@@ -92,5 +92,15 @@ namespace go2grocery_1
                 MessageBox.Show("Export successful");
             }
         }
+
+        private void salesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

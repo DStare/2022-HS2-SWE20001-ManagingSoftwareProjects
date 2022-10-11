@@ -25,8 +25,6 @@ C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\pr
 C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\obj\Debug\go2grocery_1.SalesForm.resources
 C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\Database1.mdf
 C:\Users\David\Desktop\uni work\sem2 2022\Managing Software Projects SWE20001\project\go2grocery_1\bin\Debug\Database1_log.ldf
-C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\Database1.mdf
-C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\Database1_log.ldf
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\go2grocery_1.exe.config
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\go2grocery_1.exe
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\go2grocery_1.pdb
@@ -40,3 +38,5 @@ C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2groce
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.exe
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.pdb
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.LoginForm.resources
+C:\Users\Dancho\source\repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\Database1.mdf
+C:\Users\Dancho\source\repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\bin\Debug\Database1_log.ldf

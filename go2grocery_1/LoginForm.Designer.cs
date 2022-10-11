@@ -74,6 +74,7 @@
             this.PasswordBox.ForeColor = System.Drawing.SystemColors.Desktop;
             this.PasswordBox.Location = new System.Drawing.Point(317, 215);
             this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.PasswordChar = '*';
             this.PasswordBox.Size = new System.Drawing.Size(155, 20);
             this.PasswordBox.TabIndex = 4;
             // 
@@ -124,7 +125,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -103,9 +103,9 @@
             this.salesBindingNavigator.MoveNextItem = null;
             this.salesBindingNavigator.MovePreviousItem = null;
             this.salesBindingNavigator.Name = "salesBindingNavigator";
-            this.salesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.salesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.salesBindingNavigator.PositionItem = null;
-            this.salesBindingNavigator.Size = new System.Drawing.Size(1624, 34);
+            this.salesBindingNavigator.Size = new System.Drawing.Size(1304, 31);
             this.salesBindingNavigator.TabIndex = 0;
             this.salesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -115,7 +115,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 29);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorDeleteItem
@@ -124,7 +124,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 29);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // salesBindingNavigatorSaveItem
@@ -133,21 +133,21 @@
             this.salesBindingNavigatorSaveItem.Enabled = false;
             this.salesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("salesBindingNavigatorSaveItem.Image")));
             this.salesBindingNavigatorSaveItem.Name = "salesBindingNavigatorSaveItem";
-            this.salesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 29);
+            this.salesBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
             this.salesBindingNavigatorSaveItem.Text = "Save Data";
             // 
             // SearchBar
             // 
             this.SearchBar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SearchBar.Name = "SearchBar";
-            this.SearchBar.Size = new System.Drawing.Size(148, 34);
+            this.SearchBar.Size = new System.Drawing.Size(100, 31);
             this.SearchBar.Text = "Search";
             this.SearchBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnterKeyPress);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // ReturnToMembers
             // 
@@ -155,7 +155,7 @@
             this.ReturnToMembers.Image = ((System.Drawing.Image)(resources.GetObject("ReturnToMembers.Image")));
             this.ReturnToMembers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ReturnToMembers.Name = "ReturnToMembers";
-            this.ReturnToMembers.Size = new System.Drawing.Size(216, 29);
+            this.ReturnToMembers.Size = new System.Drawing.Size(144, 28);
             this.ReturnToMembers.Text = "Return to Members Form";
             this.ReturnToMembers.Click += new System.EventHandler(this.ReturnToMembers_Click);
             // 
@@ -183,8 +183,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.salesDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.salesDataGridView.GridColor = System.Drawing.Color.RosyBrown;
-            this.salesDataGridView.Location = new System.Drawing.Point(0, 190);
-            this.salesDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.salesDataGridView.Location = new System.Drawing.Point(-9, 64);
             this.salesDataGridView.Name = "salesDataGridView";
             this.salesDataGridView.RowHeadersWidth = 62;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -192,7 +191,7 @@
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.NullValue = null;
             this.salesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.salesDataGridView.Size = new System.Drawing.Size(1271, 55);
+            this.salesDataGridView.Size = new System.Drawing.Size(1264, 164);
             this.salesDataGridView.TabIndex = 1;
             this.salesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salesDataGridView_CellContentClick);
             // 
@@ -263,10 +262,9 @@
             // 
             // Export_Sales_btn
             // 
-            this.Export_Sales_btn.Location = new System.Drawing.Point(698, 595);
-            this.Export_Sales_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Export_Sales_btn.Location = new System.Drawing.Point(641, 350);
             this.Export_Sales_btn.Name = "Export_Sales_btn";
-            this.Export_Sales_btn.Size = new System.Drawing.Size(171, 46);
+            this.Export_Sales_btn.Size = new System.Drawing.Size(114, 30);
             this.Export_Sales_btn.TabIndex = 2;
             this.Export_Sales_btn.Text = "Export";
             this.Export_Sales_btn.UseVisualStyleBackColor = true;
@@ -279,10 +277,9 @@
             this.label1.ForeColor = System.Drawing.Color.RosyBrown;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label1.ImageKey = "(none)";
-            this.label1.Location = new System.Drawing.Point(13, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(9, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(595, 58);
+            this.label1.Size = new System.Drawing.Size(400, 39);
             this.label1.TabIndex = 3;
             this.label1.Text = "Go2Grocery sales Page";
             this.label1.UseMnemonic = false;
@@ -290,17 +287,16 @@
             // 
             // SalesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::go2grocery_1.Properties.Resources.go2grocery;
-            this.ClientSize = new System.Drawing.Size(1624, 692);
+            this.ClientSize = new System.Drawing.Size(1304, 490);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Export_Sales_btn);
             this.Controls.Add(this.salesDataGridView);
             this.Controls.Add(this.salesBindingNavigator);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SalesForm";
             this.Text = "SalesForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sales_FormClosing);

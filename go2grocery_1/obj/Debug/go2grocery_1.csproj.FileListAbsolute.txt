@@ -39,3 +39,4 @@ C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2groce
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.csproj.CoreCompileInputs.cache
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.exe
 C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.pdb
+C:\Users\Dancho\Source\Repos\2022-HS2-SWE20001-ManagingSoftwareProjects\go2grocery_1\obj\Debug\go2grocery_1.LoginForm.resources

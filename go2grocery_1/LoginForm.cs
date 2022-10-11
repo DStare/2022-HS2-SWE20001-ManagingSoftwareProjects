@@ -41,7 +41,49 @@ namespace go2grocery_1
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            
+            if (UsernameBox.Text !="" & PasswordBox.Text != "")
+            {
+                string queryText = "SELECT Count(*) FROM Login " + " WHERE (Username = @Username COLLATE SQL_Latin1_general_CP1_CS_AS) AND Password = @Password COLLATE SQL_Latin1_general_CP1_CS_AS";
+                SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand(queryText, cn);
+                {
+                    cn.Open();
+                    cmd.Parameters.AddWithValue("@Username", UsernameBox.Text);
+                    cmd.Parameters.AddWithValue("@Password", PasswordBox.Text);
+                    int result = Convert.ToInt32(cmd.ExecuteScalar());
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Login Successfull");
+                        Form1 form1 = new Form1();
+                        form1.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username and password are case sensitive, please double check and try again");
+                    }
+                }
+            }
+            else if (UsernameBox.Text == "" && PasswordBox.Text == "")
+            {
+                MessageBox.Show("Please enter a username and password");
+            }
+            else if (UsernameBox.Text == "")
+            {
+                MessageBox.Show("Please enter a username");
+            }
+            else if (PasswordBox.Text == "")
+            {
+                MessageBox.Show("Please enter a password");
+            }
+            con.Close();
+        }
+    }
+}
+
+
+
+/*
             SqlConnection con = new SqlConnection();
             con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
             con.Open();
@@ -49,37 +91,6 @@ namespace go2grocery_1
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            
-            /*
-            try
-            {
-                string str_user, str_password;
-                int j;
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
-                con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Login WHERE (username LIKE='" + UsernameBox.Text + "') AND password LIKE='" + PasswordBox.Text + "'", con);
-                SqlDataReader  dr = cmd.ExecuteReader();
-                dr.Read();
-                if (dr.HasRows) 
-                {
-                    for (j = 0; j < 3; j++){
-                        str_user = dr[j].ToString();
-                        str_password = dr[j].ToString();
-                        if (string.Compare(UsernameBox.Text, str_user, CasesensitiveComparer.Binary))
-                        {
-       
-                        }
-                    }
-                }
-                dr.Close();
-                con.Close();
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show("Update failed");
-            }
-            */
 
             
             if (UsernameBox.Text == "" && PasswordBox.Text == "") 
@@ -107,6 +118,4 @@ namespace go2grocery_1
             }
             
             con.Close();
-        }
-    }
-}
+            */

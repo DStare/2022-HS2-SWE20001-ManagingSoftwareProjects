@@ -132,8 +132,10 @@
         }
 
         #endregion
-        private DataSet1TableAdapters.LoginTableAdapter LoginTableAdapter;
-        private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        //private DataSet1 dataSet1;
+        //private System.Windows.Forms.BindingSource loginBindingSource;
+        //private DataSet1TableAdapters.LoginTableAdapter loginTableAdapter;
+        //private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox UsernameBox;

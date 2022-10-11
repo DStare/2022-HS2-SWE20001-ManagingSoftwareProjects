@@ -15,6 +15,10 @@ namespace go2grocery_1 {
 
 namespace go2grocery_1.DataSet1TableAdapters
 {
+    partial class LoginTableAdapter
+    {
+    }
+
     partial class SalesTableAdapter
     {
     }

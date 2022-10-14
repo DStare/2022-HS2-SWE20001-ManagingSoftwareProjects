@@ -30,12 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataSet1 = new go2grocery_1.DataSet1();
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salesTableAdapter = new go2grocery_1.DataSet1TableAdapters.SalesTableAdapter();
-            this.tableAdapterManager = new go2grocery_1.DataSet1TableAdapters.TableAdapterManager();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.salesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -44,47 +40,32 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ReturnToMembers = new System.Windows.Forms.ToolStripButton();
             this.salesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Export_Sales_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.find_sales_btn = new System.Windows.Forms.Button();
             this.sales_mem_ID_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new go2grocery_1.DataSet1();
+            this.salesTableAdapter = new go2grocery_1.DataSet1TableAdapters.SalesTableAdapter();
+            this.tableAdapterManager = new go2grocery_1.DataSet1TableAdapters.TableAdapterManager();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stockTableAdapter = new go2grocery_1.DataSet1TableAdapters.StockTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingNavigator)).BeginInit();
             this.salesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salesBindingSource
-            // 
-            this.salesBindingSource.DataMember = "Sales";
-            this.salesBindingSource.DataSource = this.dataSet1;
-            // 
-            // salesTableAdapter
-            // 
-            this.salesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.MemberTableAdapter = null;
-            this.tableAdapterManager.SalesTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = go2grocery_1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // salesBindingNavigator
             // 
@@ -141,7 +122,6 @@
             // 
             // SearchBar
             // 
-            this.SearchBar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SearchBar.Name = "SearchBar";
             this.SearchBar.Size = new System.Drawing.Size(100, 31);
             this.SearchBar.Text = "Search";
@@ -177,91 +157,26 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.salesDataGridView.DataSource = this.salesBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.salesDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.salesDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.salesDataGridView.GridColor = System.Drawing.Color.RosyBrown;
             this.salesDataGridView.Location = new System.Drawing.Point(-9, 64);
             this.salesDataGridView.Name = "salesDataGridView";
             this.salesDataGridView.RowHeadersWidth = 62;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.NullValue = null;
-            this.salesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.NullValue = null;
+            this.salesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.salesDataGridView.Size = new System.Drawing.Size(1264, 164);
             this.salesDataGridView.TabIndex = 1;
-            this.salesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salesDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Sales_Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Sales_Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Product_Id";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Product_Id";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Product_Name";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Product_Name";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Quantity";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Unit_Price";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Unit_Price";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Total_Price";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Total_Price";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date_Of_Sale";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Date_Of_Sale";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Member_Id";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Member_Id";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 150;
+            this.salesDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.salesDataGridView_CellValueChanged);
             // 
             // Export_Sales_btn
             // 
@@ -315,13 +230,111 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Find sales by member ID:";
             // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataMember = "Sales";
+            this.salesBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // salesTableAdapter
+            // 
+            this.salesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.LoginTableAdapter = null;
+            this.tableAdapterManager.MemberTableAdapter = null;
+            this.tableAdapterManager.SalesTableAdapter = null;
+            this.tableAdapterManager.StockTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = go2grocery_1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Member_Id";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Member_Id";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date_Of_Sale";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Date_Of_Sale";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Total_Price";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Total_Price";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Unit_Price";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Unit_Price";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Quantity";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Product_Name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Product_Name";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Product_Id";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Product_Id";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Sales_Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Sales_Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // stockBindingSource
+            // 
+            this.stockBindingSource.DataMember = "Stock";
+            this.stockBindingSource.DataSource = this.dataSet1;
+            // 
+            // stockTableAdapter
+            // 
+            this.stockTableAdapter.ClearBeforeFill = true;
+            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::go2grocery_1.Properties.Resources.go2grocery;
-            this.ClientSize = new System.Drawing.Size(1304, 490);
+            this.ClientSize = new System.Drawing.Size(1304, 623);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.sales_mem_ID_txt);
             this.Controls.Add(this.find_sales_btn);
@@ -334,12 +347,13 @@
             this.Text = "SalesForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sales_FormClosing);
             this.Load += new System.EventHandler(this.SalesForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingNavigator)).EndInit();
             this.salesBindingNavigator.ResumeLayout(false);
             this.salesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,14 +370,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton salesBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView salesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.ToolStripTextBox SearchBar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton ReturnToMembers;
@@ -372,5 +378,15 @@
         private System.Windows.Forms.Button find_sales_btn;
         private System.Windows.Forms.TextBox sales_mem_ID_txt;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.BindingSource stockBindingSource;
+        private DataSet1TableAdapters.StockTableAdapter stockTableAdapter;
     }
 }

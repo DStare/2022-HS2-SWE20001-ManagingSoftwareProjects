@@ -1,4 +1,5 @@
-﻿using System;
+﻿using go2grocery_1.DataSet1TableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,8 @@ namespace go2grocery_1
 
         private void SalesForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.Stock' table. You can move, or remove it, as needed.
+            this.stockTableAdapter.Fill(this.dataSet1.Stock);
             // TODO: This line of code loads data into the 'dataSet1.Table' table. You can move, or remove it, as needed.
             this.salesTableAdapter.Fill(this.dataSet1.Sales);
 
@@ -59,6 +62,10 @@ namespace go2grocery_1
                 this.dataSet1.Sales.AcceptChanges();
                 this.salesTableAdapter.Fill(this.dataSet1.Sales);
 
+                this.stockTableAdapter.Update(this.dataSet1.Stock);
+                this.dataSet1.Stock.AcceptChanges();
+                this.stockTableAdapter.Fill(this.dataSet1.Stock);
+
             }
             catch (System.Exception ex)
             {
@@ -79,6 +86,10 @@ namespace go2grocery_1
                 this.dataSet1.Sales.AcceptChanges();
                 this.salesTableAdapter.Fill(this.dataSet1.Sales);
 
+                this.stockTableAdapter.Update(this.dataSet1.Stock);
+                this.dataSet1.Stock.AcceptChanges();
+                this.stockTableAdapter.Fill(this.dataSet1.Stock);
+
             }
             catch
             {
@@ -94,9 +105,44 @@ namespace go2grocery_1
             }
         }
 
-        private void salesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void salesDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            int quantity, currentStockQuantity, finalQuantity, Product_Id;
+            DataRow salesRow, stockRow;
 
+            if (e.ColumnIndex == 3 && e.RowIndex >= 0)
+            {
+                salesRow = dataSet1.Tables["Sales"].Rows[e.RowIndex];
+                Product_Id = Int16.Parse(salesRow[1].ToString());
+                quantity = Int16.Parse(salesRow[3].ToString());
+
+                stockRow = dataSet1.Tables["Stock"].Rows.Find(Product_Id);
+                currentStockQuantity = Int16.Parse(stockRow[1].ToString());
+                finalQuantity = currentStockQuantity - quantity;
+
+                if (finalQuantity < 0)
+                {
+                    MessageBox.Show("ALERT, quantity required for this order is: " +
+                        quantity.ToString() +
+                        "\nBut the current stock is only "
+                        + currentStockQuantity.ToString());
+                }
+                else if (finalQuantity < 5 && finalQuantity >= 0)
+                {
+                    MessageBox.Show("ALERT, quantity remaining is: "
+                        + finalQuantity.ToString() +
+                        "\nOrder stock urgently");
+                    stockTableAdapter.UpdateQuantity(finalQuantity, Product_Id);
+                }
+                else 
+                {
+                    stockTableAdapter.UpdateQuantity(finalQuantity, Product_Id);
+                }
+                //stockTableAdapter.UpdateQuantity(10000, Product_Id);
+
+            }
+
+        
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -115,6 +161,7 @@ namespace go2grocery_1
             }
             else
             {
+            
                 DataRow foundRow = dataSet1.Tables["Sales"].Rows.Find(b);
                 if (foundRow != null)
                 {

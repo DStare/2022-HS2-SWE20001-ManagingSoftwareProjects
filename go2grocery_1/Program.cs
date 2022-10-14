@@ -16,7 +16,7 @@ namespace go2grocery_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new Form1());
         }
         //test
     }

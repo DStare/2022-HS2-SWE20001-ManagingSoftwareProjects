@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataSet1 = new go2grocery_1.DataSet1();
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesTableAdapter = new go2grocery_1.DataSet1TableAdapters.SalesTableAdapter();
@@ -54,6 +54,9 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Export_Sales_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.find_sales_btn = new System.Windows.Forms.Button();
+            this.sales_mem_ID_txt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingNavigator)).BeginInit();
@@ -174,23 +177,23 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.salesDataGridView.DataSource = this.salesBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.salesDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.salesDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
             this.salesDataGridView.GridColor = System.Drawing.Color.RosyBrown;
             this.salesDataGridView.Location = new System.Drawing.Point(-9, 64);
             this.salesDataGridView.Name = "salesDataGridView";
             this.salesDataGridView.RowHeadersWidth = 62;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.NullValue = null;
-            this.salesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.NullValue = null;
+            this.salesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.salesDataGridView.Size = new System.Drawing.Size(1264, 164);
             this.salesDataGridView.TabIndex = 1;
             this.salesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.salesDataGridView_CellContentClick);
@@ -285,6 +288,33 @@
             this.label1.UseMnemonic = false;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // find_sales_btn
+            // 
+            this.find_sales_btn.Location = new System.Drawing.Point(310, 350);
+            this.find_sales_btn.Name = "find_sales_btn";
+            this.find_sales_btn.Size = new System.Drawing.Size(114, 30);
+            this.find_sales_btn.TabIndex = 5;
+            this.find_sales_btn.Text = "Find Sales record";
+            this.find_sales_btn.UseVisualStyleBackColor = true;
+            this.find_sales_btn.Click += new System.EventHandler(this.find_sales_btn_Click);
+            // 
+            // sales_mem_ID_txt
+            // 
+            this.sales_mem_ID_txt.Location = new System.Drawing.Point(310, 310);
+            this.sales_mem_ID_txt.Name = "sales_mem_ID_txt";
+            this.sales_mem_ID_txt.Size = new System.Drawing.Size(100, 20);
+            this.sales_mem_ID_txt.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(111, 311);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(183, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Find sales by member ID:";
+            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +322,9 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::go2grocery_1.Properties.Resources.go2grocery;
             this.ClientSize = new System.Drawing.Size(1304, 490);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.sales_mem_ID_txt);
+            this.Controls.Add(this.find_sales_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Export_Sales_btn);
             this.Controls.Add(this.salesDataGridView);
@@ -336,5 +369,8 @@
         private System.Windows.Forms.ToolStripButton ReturnToMembers;
         private System.Windows.Forms.Button Export_Sales_btn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button find_sales_btn;
+        private System.Windows.Forms.TextBox sales_mem_ID_txt;
+        private System.Windows.Forms.Label label2;
     }
 }

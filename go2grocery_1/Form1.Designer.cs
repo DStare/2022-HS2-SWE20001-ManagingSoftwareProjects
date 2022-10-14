@@ -57,6 +57,9 @@
             this.tableAdapterManager = new go2grocery_1.DataSet1TableAdapters.TableAdapterManager();
             this.export_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.find_btn = new System.Windows.Forms.Button();
+            this.sales_mem_id_txt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).BeginInit();
             this.memberBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
@@ -230,7 +233,7 @@
             this.dataGridViewTextBoxColumn4});
             this.memberDataGridView.DataSource = this.memberBindingSource;
             this.memberDataGridView.Location = new System.Drawing.Point(0, 63);
-            this.memberDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.memberDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.memberDataGridView.Name = "memberDataGridView";
             this.memberDataGridView.RowHeadersWidth = 62;
             this.memberDataGridView.RowTemplate.Height = 28;
@@ -284,7 +287,7 @@
             // 
             // export_btn
             // 
-            this.export_btn.Location = new System.Drawing.Point(383, 371);
+            this.export_btn.Location = new System.Drawing.Point(508, 402);
             this.export_btn.Name = "export_btn";
             this.export_btn.Size = new System.Drawing.Size(75, 23);
             this.export_btn.TabIndex = 2;
@@ -306,17 +309,48 @@
             this.label1.Text = "Go2Grocery member Page";
             this.label1.UseMnemonic = false;
             // 
+            // find_btn
+            // 
+            this.find_btn.Location = new System.Drawing.Point(222, 402);
+            this.find_btn.Name = "find_btn";
+            this.find_btn.Size = new System.Drawing.Size(75, 23);
+            this.find_btn.TabIndex = 4;
+            this.find_btn.Text = "Find member";
+            this.find_btn.UseVisualStyleBackColor = true;
+            this.find_btn.Click += new System.EventHandler(this.find_btn_Click);
+            // 
+            // sales_mem_id_txt
+            // 
+            this.sales_mem_id_txt.Location = new System.Drawing.Point(222, 356);
+            this.sales_mem_id_txt.Name = "sales_mem_id_txt";
+            this.sales_mem_id_txt.Size = new System.Drawing.Size(75, 20);
+            this.sales_mem_id_txt.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(65, 360);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Find member by ID:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::go2grocery_1.Properties.Resources.go2grocery;
             this.ClientSize = new System.Drawing.Size(819, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.sales_mem_id_txt);
+            this.Controls.Add(this.find_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.export_btn);
             this.Controls.Add(this.memberDataGridView);
             this.Controls.Add(this.memberBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "member form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -360,6 +394,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton SalesFormButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button find_btn;
+        private System.Windows.Forms.TextBox sales_mem_id_txt;
+        private System.Windows.Forms.Label label2;
     }
 }
 

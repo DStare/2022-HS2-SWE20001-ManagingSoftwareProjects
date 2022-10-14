@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -100,6 +101,31 @@ namespace go2grocery_1
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void find_sales_btn_Click(object sender, EventArgs e)
+        {
+            string b = sales_mem_ID_txt.Text;
+            bool containsLetter = Regex.IsMatch(b, "[a-zA-Z!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]");
+
+            if (containsLetter)
+            {
+                MessageBox.Show("Can only search for member by ID, please no letters or symbols");
+            }
+            else
+            {
+                DataRow foundRow = dataSet1.Tables["Sales"].Rows.Find(b);
+                if (foundRow != null)
+                {
+                    MessageBox.Show("Sales ID: " + foundRow[0].ToString() + "\n" + "Product ID: " + foundRow[1].ToString() + "\n" + "Product name: " + foundRow[2].ToString() + "\n" + "Quantity: " + foundRow[3].ToString() + "\n" + "Price: $" + foundRow[4].ToString()
+                       + "\n" + "Total price: $" + foundRow[5].ToString() + "\n" + "Date of sale: " + foundRow[6].ToString() + "\n" + "Member ID: " + foundRow[7].ToString());
+                }
+                else
+                {
+                    MessageBox.Show("A sale record with the sales ID of " + b + " Does not exist");
+                }
+            }
 
         }
     }

@@ -45,6 +45,14 @@ namespace go2grocery_1
             }
         }
 
+        private void salesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.salesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet1);
+
+        }
+
         private void ReturnToMembers_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
@@ -105,12 +113,49 @@ namespace go2grocery_1
             }
         }
 
-        private void salesDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void salesDataGridView_UserAddedRow(object sender, DataGridViewCellEventArgs e)
         {
             int quantity, currentStockQuantity, finalQuantity, Product_Id;
             DataRow salesRow, stockRow;
 
-            if (e.ColumnIndex == 3 && e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && e.RowIndex <= dataSet1.Tables["Sales"].Rows.Count - 1)
+            {
+                salesRow = dataSet1.Tables["Sales"].Rows[e.RowIndex];
+                Product_Id = Int16.Parse(salesRow[1].ToString());
+                quantity = Int16.Parse(salesRow[3].ToString());
+
+                stockRow = dataSet1.Tables["Stock"].Rows.Find(Product_Id);
+                currentStockQuantity = Int16.Parse(stockRow[1].ToString());
+                finalQuantity = currentStockQuantity - quantity;
+
+                if (finalQuantity < 0)
+                {
+                    MessageBox.Show("ALERT, quantity required for this order is: " +
+                        quantity.ToString() +
+                        "\nBut the current stock is only "
+                        + currentStockQuantity.ToString());
+                }
+                else if (finalQuantity < 5 && finalQuantity >= 0)
+                {
+                    MessageBox.Show("ALERT, quantity remaining is: "
+                        + finalQuantity.ToString() +
+                        "\nOrder stock urgently");
+                    stockTableAdapter.UpdateQuantity(finalQuantity, Product_Id);
+                }
+                else
+                {
+                    stockTableAdapter.UpdateQuantity(finalQuantity, Product_Id);
+                }
+                //stockTableAdapter.UpdateQuantity(10000, Product_Id);
+            }
+        }
+
+            private void salesDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            int quantity, currentStockQuantity, finalQuantity, Product_Id;
+            DataRow salesRow, stockRow;
+
+            if (e.ColumnIndex == 3 && e.RowIndex >= 0 && e.RowIndex <= dataSet1.Tables["Sales"].Rows.Count - 1)
             {
                 salesRow = dataSet1.Tables["Sales"].Rows[e.RowIndex];
                 Product_Id = Int16.Parse(salesRow[1].ToString());

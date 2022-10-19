@@ -126,7 +126,7 @@ namespace go2grocery_1
 
                 stockRow = dataSet1.Tables["Stock"].Rows.Find(Product_Id);
                 currentStockQuantity = Int16.Parse(stockRow[1].ToString());
-                finalQuantity = currentStockQuantity - quantity;
+                finalQuantity = finalQuantityCalculation(quantity, currentStockQuantity);
 
                 if (finalQuantity < 0)
                 {
@@ -150,6 +150,11 @@ namespace go2grocery_1
             }
         }
 
+        public int finalQuantityCalculation(int quantity, int currentQuantity)
+        {
+            return currentQuantity - quantity;
+        }
+
             private void salesDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             int quantity, currentStockQuantity, finalQuantity, Product_Id;
@@ -163,7 +168,7 @@ namespace go2grocery_1
 
                 stockRow = dataSet1.Tables["Stock"].Rows.Find(Product_Id);
                 currentStockQuantity = Int16.Parse(stockRow[1].ToString());
-                finalQuantity = currentStockQuantity - quantity;
+                finalQuantity = finalQuantityCalculation(quantity, currentStockQuantity);
 
                 if (finalQuantity < 0)
                 {
